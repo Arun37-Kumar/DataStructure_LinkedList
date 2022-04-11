@@ -13,9 +13,16 @@ namespace DataStructures_LinkedList_StacksAndQueues
             Console.WriteLine("Welcome to Linked List Section !");
 
             LinkedList list = new LinkedList();
-            list.AddNode(56);
-            list.AddNode(30);
+
+            // UC1
+            //list.AddNode(56);
+            //list.AddNode(30);
+            //list.AddNode(70);
+
+            //UC2
             list.AddNode(70);
+            list.AddNode(30);
+            list.AddNode(56);
             Console.WriteLine("The elements in linked list are : ");
             list.Display();
 

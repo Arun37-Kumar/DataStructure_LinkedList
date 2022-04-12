@@ -10,6 +10,7 @@ namespace DataStructures_LinkedList_StacksAndQueues
     {
         // head position
         internal Node head;
+        public int count = 0;
 
         //Add the node
         internal void AddNode(int data)
@@ -27,7 +28,8 @@ namespace DataStructures_LinkedList_StacksAndQueues
                 {
                     temp = temp.next;
                 }
-                temp.next = node;   
+                temp.next = node;
+                count++;
             }
             Console.WriteLine("{0} inserted into Linked List.", node.data);
         }
@@ -79,5 +81,20 @@ namespace DataStructures_LinkedList_StacksAndQueues
             Console.WriteLine("Inserted value is : " + head);
             return head;
         }
+
+        //Delete the element
+        public void DeleteFirst()
+        {
+            if( count > 0)
+            {
+                head = head.next;
+                count--;
+            }
+            else
+            {
+                Console.WriteLine("No element exist in the linked list");
+            }
+        }
+
     }
 }

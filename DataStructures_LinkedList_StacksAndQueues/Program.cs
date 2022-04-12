@@ -26,6 +26,12 @@ namespace DataStructures_LinkedList_StacksAndQueues
             Console.WriteLine("The elements in linked list are : ");
             list.Display();
 
+            //UC3
+            
+            Console.WriteLine();
+            list.Insert(2,30);
+            
+
             Console.ReadLine();
         }
     }

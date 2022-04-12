@@ -96,5 +96,59 @@ namespace DataStructures_LinkedList_StacksAndQueues
             }
         }
 
+        static Node removeLastNode(Node head)
+        {
+            if (head == null)
+                return null;
+
+            if (head.next == null)
+            {
+                return null;
+            }
+
+            // Find the second last node
+            Node second_last = head;
+            while (second_last.next.next != null)
+                second_last = second_last.next;
+
+            // Change next of second last
+            second_last.next = null;
+
+            return head;
+        }
+
+        //Delete last node of the list
+        public void deleteLastNode()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Empty Linked List");
+                return;
+            }
+            else
+            {
+                var temp = this.head;
+                Node find = null;
+                // Find second last node
+                while (temp.next != null)
+                {
+                    find = temp;
+                    temp = temp.next;
+                }
+                if (find == null)
+                {
+                    // Delete head node of linked list
+                    this.head = null;
+                    
+                }
+                else
+                {
+                    // Set new last node
+                    
+                    find.next = null;
+                }
+            }
+        }
+
     }
 }

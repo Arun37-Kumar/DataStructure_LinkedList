@@ -48,5 +48,18 @@ namespace DataStructures_LinkedList_StacksAndQueues
             }
         }
 
+        //Get Size of Linked List
+        public int Size()
+        {
+            int size = 0;
+            Node temp = head;
+            while (temp != null)
+            {
+                size++;
+                temp = temp.next;
+            }
+            return size;
+        }
+
     }
 }

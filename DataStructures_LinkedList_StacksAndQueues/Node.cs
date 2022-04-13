@@ -13,6 +13,7 @@ namespace DataStructures_LinkedList_StacksAndQueues
         public Node(int data)
         {
             this.data = data;
+            next = null;
         }
     }
 }

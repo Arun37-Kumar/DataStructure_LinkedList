@@ -19,18 +19,20 @@ namespace DataStructures_LinkedList_StacksAndQueues
             //list.AddNode(30);
             //list.AddNode(70);
 
-            //UC2
+
+            //list.AddNode(56);
+            //list.AddNode(30);
+            //list.AddNode(70);
+            //Console.WriteLine("The elements in linked list are : ");
+            //list.Display();
+
+            //list.DeleteFirst();
+            //list.deleteLastNode();
+
             list.AddNode(56);
             list.AddNode(30);
             list.AddNode(70);
-            Console.WriteLine("The elements in linked list are : ");
-            list.Display();
-
-            //UC3 
-            Console.WriteLine();
-            //list.Insert(2,30);
-            //list.DeleteFirst();
-            list.deleteLastNode();
+            list.Insert(2,40);
             list.Display();
             Console.ReadLine();
         }

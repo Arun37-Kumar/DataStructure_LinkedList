@@ -50,38 +50,6 @@ namespace DataStructures_LinkedList_StacksAndQueues
             }
         }
 
-        public Node Insert(int position, int data)
-        {
-            if (position < 1)
-                Console.WriteLine("Invalid Position!");
-
-            if (position == 1)
-            {
-                var newNode = new Node(data);
-                newNode.next = this.head;
-                head = newNode;
-            }
-            else
-            {
-                while(position-- != 0)
-                {
-                    if(position == 1)
-                    {
-                        Node node = new Node(data);
-                        node.next = this.head.next;
-                        head.next = node;
-                    }
-                    head = head.next;
-                }
-                if (position == 1)
-                {
-                    Console.WriteLine("Position out of range.");
-                }
-            }
-            Console.WriteLine("Inserted value is : " + head);
-            return head;
-        }
-
         //Delete the element
         public void DeleteFirst()
         {
@@ -149,6 +117,33 @@ namespace DataStructures_LinkedList_StacksAndQueues
                 }
             }
         }
+
+        //Inserting data into a particular position
+        public void Insert(int position, int data)
+        {
+            Node node = new Node(data);
+            if (position < 1)
+                Console.WriteLine("Invalid Position");
+            else if (position == 1)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+
+                while (position > 2)
+                {
+                    temp = temp.next;
+                    position--;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
+        }
+
+
 
     }
 }
